@@ -1,0 +1,77 @@
+@keyframes spin {
+	0% {
+		-webkit-transform: translate(-50%, -50%) rotate(0deg);
+		-ms-transform: translate(-50%, -50%) rotate(0deg);
+		-o-transform: translate(-50%, -50%) rotate(0deg);
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: translate(-50%, -50%) rotate(360deg);
+		-ms-transform: translate(-50%, -50%) rotate(360deg);
+		-o-transform: translate(-50%, -50%) rotate(360deg);
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		top: calc(50% + 45px);
+	}
+
+	25% {
+		top: calc(50% - 100px);
+	}
+
+	50% {
+		top: calc(50% - 55px);
+	}
+
+	75% {
+		top: calc(50% - 90px);
+	}
+
+	100% {
+		top: calc(50% + 45px);
+	}		
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #262626;
+}
+
+.line {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	border-bottom: 4px solid #ffffff;
+	-webkit-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+.dot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	border-radius: 50%;
+	-webkit-animation: bounce 2s linear infinite;
+	-o-animation: bounce 2s linear infinite;
+	animation: bounce 2s linear infinite;	
+}
